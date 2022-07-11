@@ -1,0 +1,3 @@
+1)Html are used for webpage design.
+2)We have some pre-defined tags.
+3)Html are user friendly and doesnot
