@@ -1,3 +1,8 @@
 1)Html are used for webpage design.
 2)We have some pre-defined tags.
-3)Html are user friendly and doesnot
+3)Html are user friendly and doesnot display any error if you miss any "" etc.
+4)html are static pages to make it dynamic we use jsp,servlet,spring,springboot etc.
+--------------------
+submit
+------------
+second?t1=sandip&t2=sandip%40gmail.com&t3=7760213014&t4=35&t5=2022-06-07
