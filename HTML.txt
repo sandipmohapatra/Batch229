@@ -25,14 +25,39 @@ frameset rows
 frameset cols
 frameset src=first.html
 -----------------------------------------------------------------
-Maps
-------------
+Goople Maps
+-----------------------------
 step 1:-https://www.google.com/maps
 step 2:-search :-location
 step 3:-share
 step 4:-embed a map
 step 5:-copy html
-------------------------------------------------------- 
+-------------------------------------------------------
+ Google Forms
+--------------------------------------
+step 1:-https://docs.google.com/forms
+step 2:-blank
+step 3:-create a form
+step 4:-response
+step 5:- +
+step 6:-create spread sheet
+step 7:- copy the URL
+https://docs.google.com/spreadsheets/d/1wHMrc7KC0LbQC4gZl27JDZQUDE0M2_mAIxdzuJMhanQ/edit?resourcekey#gid=443079177
+-----------------------------------------------------
+step 8:-send
+step 9:- click on < >
+step 10:-copy the link
+step 11:- paste on your web page
+
+
+
+
+
+
+
+
+
+ 
 
 
 
