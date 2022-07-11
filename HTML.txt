@@ -6,3 +6,15 @@
 submit
 ------------
 second?t1=sandip&t2=sandip%40gmail.com&t3=7760213014&t4=35&t5=2022-06-07
+------------------------------------------
+Tags
+-------------------
+1)<h1><h2>....<h6>--------------Header tags it will make the text BOLD 
+2)<center><left><right>---------Align the text
+3)<hr color=red>------------horizontal line.
+4)<form action=second>--------to cennect the front end with the middle ware
+5)<table>
+<tr>-----table row
+<td>----table division
+</table>
+6)attributes of input type=text,number,email,date,time,radio,checkbox... 
