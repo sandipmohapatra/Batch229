@@ -18,3 +18,6 @@ Tags
 <td>----table division
 </table>
 6)attributes of input type=text,number,email,date,time,radio,checkbox... 
+--------------------------------------------------------------------------------------------------
+file:///C:/Users/sandip/Desktop/229%20Batch/second?t1=sandip&t2=sandip%40gmail.com&t3=7760213015&t4=21&t5=2022-07-05&t6=on&t7=on&t10=India
+--------------------------------------------------------------------------------------------------------------------------
