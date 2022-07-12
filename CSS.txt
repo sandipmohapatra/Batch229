@@ -1,0 +1,11 @@
+CSS:- cascading style sheet
+------------------------------------
+It is used to style our html page.
+We have 3 types of css.
+1)inline css:- It will be applicable to a single line.
+2)internal css:- It will be applicable to a single page.
+3)external css:- It will be applicable to a single project.
+------------------------------------------------------------------------------
+The extention will be .html for inline and internal css.
+The extention will be .css for external css.
+-------------------------------------------------------------------------------
