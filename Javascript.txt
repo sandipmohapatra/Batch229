@@ -31,3 +31,23 @@ alert("the sum is "+c);
 </script>
 </html>
 ---------------------------------------------------------------------------
+wap to enter 5 nos and find sum and avg.
+---------------------------------------------------------------------
+case and switch
+-------------------------
+we will be having multiple cases and according to our input the control will switch to a particular case.
+Execute it then break/terminate from the program
+--------------------------
+example:-
+
+
+
+
+
+
+
+
+
+
+
+
