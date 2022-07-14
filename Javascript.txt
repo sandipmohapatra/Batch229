@@ -39,7 +39,30 @@ we will be having multiple cases and according to our input the control will swi
 Execute it then break/terminate from the program
 --------------------------
 example:-
-
+<html>
+<script>
+var a=prompt("Enter a no");
+var b=parseInt(a);
+switch(b)
+{
+case 1:document.write("one");
+break;
+case 2:document.write("two");
+break;
+case 3:document.write("three");
+break;
+case 4:document.write("four");
+break;
+case 5:document.write("five");
+break;
+case 6:document.write("six");
+break;
+default:
+document.write("Invalid no");
+}
+</script>
+</html>
+------------------------------------
 
 
 
