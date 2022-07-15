@@ -1,0 +1,52 @@
+<html>
+<script>
+function fun()
+{
+var a=f1.t1.value;
+var b=f1.t2.value;
+var c=f1.t3.value;
+var d=f1.t4.value;
+if(a=="")
+{
+alert("Rollno is empty");
+f1.t1.focus();
+}
+
+else if(b=="")
+{
+alert("Name is empty");
+f1.t2.focus();
+}
+
+else if(c=="")
+{
+alert("Address is empty");
+f1.t3.focus();
+}
+
+else if(d=="")
+{
+alert("Phone no is empty");
+f1.t4.focus();
+}
+else
+{
+alert("Data submited successfully");
+f1.submit();
+}
+
+}
+</script>
+<body bgcolor=cyan>
+<form name="f1" action="second.jsp">
+<h1><center>Employee Registration page</center></h1><hr>
+<table>
+<tr><td>Rollno is :<td><input type=text name=t1 size=20></tr>
+<tr><td>Name is :<td><input type=text name=t2 size=20></tr>
+<tr><td>Address is :<td><input type=text name=t3 size=20></tr>
+<tr><td>Phoneno is :<td><input type=text name=t4 size=20></tr>
+<tr><td><td><input type=button value=submit onclick=fun()></tr>
+</table>
+</form>
+</body>
+</html>
