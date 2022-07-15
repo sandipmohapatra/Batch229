@@ -12,6 +12,18 @@ alert("Rollno is empty");
 f1.t1.focus();
 }
 
+else if(isNaN(a))
+{
+alert("Please enter number only");
+f1.t1.focus();
+}
+
+else if(a==0)
+{
+alert("Rollno cannot be zero");
+f1.t1.focus();
+}
+
 else if(b=="")
 {
 alert("Name is empty");
@@ -29,6 +41,20 @@ else if(d=="")
 alert("Phone no is empty");
 f1.t4.focus();
 }
+
+else if(d==0)
+{
+alert("Phone no cannot be zero ");
+f1.t4.focus();
+}
+
+else if(d.length!=10)
+{
+alert("Phone no should be 10 digits only");
+f1.t4.focus();
+}
+
+
 else
 {
 alert("Data submited successfully");
