@@ -1,0 +1,34 @@
+ts-typescript
+----------------------------
+app
+-app.component.ts
+-app.component.css
+-app.component.html
+-app.module.ts:- has list of files which are created
+
+index.html:-starting point
+-------------------------------------------------------------------------------
+execution flow
+----------------------
+1)index.html:- we have the selector.<app-root></app-root>
+2)app.moduule.ts---[bootstrap].it contains the file which need to run.
+-----------------------------
+-------------------------------------------------------------------------------------------------------
+to create a new module
+-----------------------------
+terminal
+step 1:-ng g c login 
+---------------------------------------------------------
+step 2:-index.html
+ <app-login>This is Mphasis Batch229</app-login>
+--------------------------------------------------------------------
+step 3:-app.module.ts
+bootstrap: [LoginComponent]
+---------------------------------------------------------------------------
+step 4:-change in login.component.html
+step 5:-change in login.component.css
+-------------------------------------------------------------
+terminal
+step 6:- ng serve
+step 7:- localhost:4200
+--------------------------------------------------------
