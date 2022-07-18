@@ -17,7 +17,7 @@ execution flow
 to create a new module
 -----------------------------
 terminal
-step 1:-ng g c login 
+step 1:-C:\Users\sandip\Desktop\Batch229\src\app>ng g c login 
 ---------------------------------------------------------
 step 2:-index.html
  <app-login>This is Mphasis Batch229</app-login>
