@@ -44,3 +44,33 @@ step 7:- localhost:4200
 </table>
 </form>
 --------------------------------------------------------------------------------
+example-1
+------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
+})
+export class RegisterComponent 
+{
+public product=
+{
+Name:'SamsungTV',
+Price:45000.00,
+MFD:'1-july-2021'
+} 
+  }
+-----------------------------------------------------
+<dl>
+<dt>Name</dt>
+<dd>{{product.Name}}</dd>
+<dt>Price</dt>
+<dd>{{product.Price}}</dd>
+<dt>Manufacturing Date</dt>
+<dd>{{product.MFD}}</dd>
+</dl>
+-----------------------------------------------------------
+wap to display your details name,email,phoneno,address and display it.
+---------------------------------------------------------------------
