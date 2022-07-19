@@ -74,3 +74,24 @@ MFD:'1-july-2021'
 -----------------------------------------------------------
 wap to display your details name,email,phoneno,address and display it.
 ---------------------------------------------------------------------
+example-1
+-----------------
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'Ranjit',
+  template: `<h1>Employee Registration Page</h1><hr>
+  <form>
+  <table>
+  <tr><td>Enter your name</td><td><input type=text name=t1 size=20></td></tr>
+  <tr><td>Enter your email</td><td><input type=text name=t2 size=20></td></tr>
+  <tr><td>Enter your address</td><td><input type=text name=t3 size=20></td></tr>
+  <tr><td>Enter your phoneno</td><td><input type=text name=t4 size=20></td></tr>
+  <tr><td>Enter your nationality</td><td><input type=text name=t5 size=20></td></tr>
+  <tr><td></td><td><input type=submit value="submit"></td></tr>
+  </table>
+  </form>`
+ })
+export class MyDetailsComponent {
+}
+-----------------------------------------------------------------------------------------------------
