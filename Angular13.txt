@@ -95,3 +95,54 @@ import { Component, OnInit } from '@angular/core';
 export class MyDetailsComponent {
 }
 -----------------------------------------------------------------------------------------------------
+example-2
+-----------------
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'Ranjit',
+  template: `
+  <p>My name is {{name}}</p>
+  <p>My email is {{email}}</p>
+  <p>My address is {{address.street}} {{address.loc}} 
+  {{address.state}} {{address.city}}</p>
+  <p><Button (click)="ShowDetails()">Show my Details..</Button></p>
+  <h3>My Hobbies are </h3>{{hobbies}}
+  <h3>My daily Foods are </h3>
+  <ul>
+  <li *ngFor="let food of foods">
+  {{food}}
+  </li>
+  </ul>
+  `
+ })
+export class MyDetailsComponent 
+{
+  name:String;
+  email:String;
+  address:any;
+  hobbies:string[];
+  foods:string[];
+constructor()
+{
+  this.name='sandip';
+  this.email='sandip@gmail.com';
+  this.address=
+  {
+    street:'MG Road',
+    loc:'Sivaji Nagar',
+    city:'Bangalore',
+    state:'Karnataka'
+  }
+  this.hobbies=['music','dance','cricket','football','movies'];
+  this.foods=['rice and Dal','Biryani','Noodles','ice-cream'];
+}
+ShowDetails()
+{
+  console.log("My name is",this.name);
+  console.log("My email is",this.email);
+  console.log("My address is",this.address);
+alert("My name is :"+this.name);
+}
+}
+--------------------------------------------------------------------------
