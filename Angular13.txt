@@ -146,3 +146,65 @@ alert("My name is :"+this.name);
 }
 }
 --------------------------------------------------------------------------
+Routing :-
+It helps in directing users to different pages.Hence based on the options they choose ,the page will render and open.
+example:- 
+Home
+about
+contact
+product
+inventry
+feedback
+--------------------------------
+example-1
+-----------------
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-rout-example',
+  template:`MphasisAngular Batch229
+  <ul>
+  <li><a [routerLink]="['/Login']">Login</a></li>
+  <li><a [routerLink]="['/Register']">Register</a></li>
+  <li><a [routerLink]="['/MyDetails']">MyDetails</a></li>
+    </ul><hr><hr>
+    <router-outlet></router-outlet>
+  `
+})
+export class RoutExampleComponent {
+}
+-----------------------------------------------------------------------------------------------------------
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule,Routes } from '@angular/router';   <------------------------------------------
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { MyDetailsComponent } from './my-details/my-details.component';
+import { RoutExampleComponent } from './rout-example/rout-example.component';
+
+const appRoutes:Routes=[     <-------------------------------------------------------------
+{path:'Login',component:LoginComponent},
+{path:'Register',component:RegisterComponent},
+{path:'MyDetails',component:MyDetailsComponent},
+]
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    RegisterComponent,
+    MyDetailsComponent,
+    RoutExampleComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule.forRoot(appRoutes)  <------------------
+  ],
+  providers: [],
+  bootstrap: [RoutExampleComponent]
+})
+export class AppModule { }
+------------------------------------------------------------------------------------------------------------------
