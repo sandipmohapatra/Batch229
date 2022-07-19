@@ -208,3 +208,121 @@ const appRoutes:Routes=[     <--------------------------------------------------
 })
 export class AppModule { }
 ------------------------------------------------------------------------------------------------------------------
+example-3
+-----------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <h2>Student Registration Page</h2>
+  <form role="form" action=second>
+    <div class="form-group">
+        <label for="name">Name:</label>
+  <input type="text" class="form-control" id="name" placeholder="Enter name" name=t1 required>
+      </div>
+      <div class="form-group">
+        <label for="number">Phone no:</label>
+  <input type="Number" class="form-control" id="Phone" placeholder="Enter phone no" name=t2 required>
+      </div>
+   
+    
+    <div class="form-group">
+      <label for="email">Email:</label>
+<input type="email" class="form-control" id="email" placeholder="Enter email" name=t3 required>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name=t4 required>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox"> Remember me</label>
+    </div>
+<button type="submit" class="btn btn-default">Submit</button> 
+  </form></div></body></html>
+--------------------------------------------------------------------------------------------------------------
+Example-2
+----------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-bootroutexample',
+  templateUrl: './bootroutexample.component.html',
+  styleUrls: ['./bootroutexample.component.css']
+})
+export class BootroutexampleComponent {
+}
+
+--------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<header>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <body id="myPage">
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a class="w3-bar-item w3-button w3-coral"><i class="fa fa-home w3-margin-right"></i>Wipro Batch-37</a>
+  <a routerLink="home" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Home</a>
+  <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Registration <i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a routerLink="/addemployee" class="w3-bar-item w3-button">EmployeeRegistration</a>
+      <a routerLink="/addcustomer"class="w3-bar-item w3-button">CustomerRegistration</a>
+    </div>
+    </div>
+  <a [routerLink]="['/Contact']" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+  <a [routerLink]="['/Registration']" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Register</a>
+  </div>
+<router-outlet></router-outlet>
+</div>
+</body>
+</header>
+-----------------------------------------------------------------------------------------------------------------------------
+---------------Angular Assignment-1------------------------------------------
+create an application using angular
+COID-19 Hospital
+registration
+doctor time table
+book a bed
+book a doctor
+book a ambulance
+give feedBack
+----------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
