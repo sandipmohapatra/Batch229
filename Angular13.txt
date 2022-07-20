@@ -309,7 +309,68 @@ book a doctor
 book a ambulance
 give feedBack
 ----------------------------------------------------------------
+1. ifdemo.component.ts
+----------------------------------------------------------------------------
+import { Component, OnInit } from '@angular/core';
 
+@Component({
+  selector: 'app-ifdemo',
+  templateUrl: './ifdemo.component.html',
+  styleUrls: ['./ifdemo.component.css']
+})
+export class IfdemoComponent {
+   public product = {
+     Name: 'Nike Casuals',
+     Price: 4500.55,
+     Photo: 'assets/shoe.jpg'
+   };
+   public showImage = false;   <!-- initial state-->
+   public btnText = 'Show';
+
+   public TogglePreview() 
+{
+      this.showImage = (this.showImage==false)?true:false;
+      this.btnText = (this.btnText=='Show')?'Hide':'Show';
+   }
+}
+--------------------------------------------------------------------------------------------------------------------
+
+2. ifdemo.component.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+<div class="container-fluid">
+    <h2>Product Details</h2>
+    <div class="row">
+      <div class="col-3">
+          <dl>
+              <dt>Name</dt>
+              <dd>{{product.Name}}</dd>
+              <dt>Price</dt>
+              <dd>{{product.Price}}</dd>
+          </dl>
+          <button (click)="TogglePreview()" class="btn btn-primary btn-sm btn-block">{{btnText}} Preview</button>
+      </div>
+      <div class="col-9">
+        <div *ngIf="showImage">
+            <img [src]="product.Photo" height="200" width="200" >
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+-----------------------------------------------------------------------------------------------------------------------
 
 
 
