@@ -211,5 +211,19 @@ console.log(x[2]);
 console.log(x[3]);
 console.log(x[4]);
 -----------------------------------------------------------------------------
+example-14
+---------------------
+let categories:string[] =["electronics","fashion","footwear"];
+
+function PrintList()
+{
+for(var property in categories)
+{
+console.log(`${property}:${categories[property]}`);
+}
+}
+
+PrintList();
+------------------------------------------------------------
 
 
