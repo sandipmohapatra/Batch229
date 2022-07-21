@@ -25,9 +25,10 @@ example2.ts
 function f1()
 {
 let x=10;
+let y;
 if(x==10)
 {
-var y=20;
+ y=20;
 }
 console.log(`x=${x}\n y=${y}`);
 }
@@ -158,6 +159,19 @@ else
 console.log("wrong password");
 }
 
+--------------------------------------------------------------------------------
+example-11
+----------------
+let Name="Samsung TV";
+let Price=45000.00;
+if (Price ==undefined)
+{
+console.log("Name ="+Name);
+}
+else
+{
+console.log("Name ="+Name+"\n Price= "+Price);
+}
 --------------------------------------------------------------------------------
 
 
