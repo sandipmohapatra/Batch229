@@ -173,12 +173,30 @@ else
 console.log("Name ="+Name+"\n Price= "+Price);
 }
 --------------------------------------------------------------------------------
+example-12
+----------------
+let Name:string|null = prompt("Enter your name");
+if (Name == null)
+{
+console.log("Name is Null");
+}
+else if(Name =="")
+{
+console.log("The name is empty");
+}
+else
+{
+console.log("Hello !" +Name);
+}
+----------------------------------------------------
+test11.html
+---------------------------
+<html>
+<head>
+<script src="example11.js"></script>
+</head>
+</html>
+---------------------------------------------------------------
 
 
 
-
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
