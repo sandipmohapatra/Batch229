@@ -11,7 +11,7 @@ example1.ts
 console.log("Welcome to typescript");
 console.log("At Be-practical");
 ----------------------------
-step 1:- npm install typescript
+step 1:- npm install -g typescript@latest
 --------------------------------------------------------------------------------------
 step 2:-
 to compile :- tsc example1.ts
