@@ -189,14 +189,27 @@ else
 console.log("Hello !" +Name);
 }
 ----------------------------------------------------
-test11.html
+test12.html
 ---------------------------
 <html>
 <head>
-<script src="example11.js"></script>
+<script src="example12.js"></script>
 </head>
 </html>
 ---------------------------------------------------------------
-
+example-13
+-------------------
+let x:any[] = ["sandip","apple",1,[1,2,3,4],5];
+x[1] = "john";
+for(var item of x[4])
+{
+console.log(item);
+}
+console.log(x[0]);
+console.log(x[1]);
+console.log(x[2]);
+console.log(x[3]);
+console.log(x[4]);
+-----------------------------------------------------------------------------
 
 
