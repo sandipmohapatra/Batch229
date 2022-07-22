@@ -1,0 +1,39 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+if(localStorage)
+{
+$(document).ready(function()
+{
+$(".save").click(function(){
+var name=$("#fn").val();
+
+localStorage.setItem("xyz",name);
+alert("Your name is saved");
+});
+
+$(".save").click(function(){
+var name=$("#fn1").val();
+
+localStorage.setItem("pqr",name);
+alert("Your last name is saved");
+});
+
+$(".access").click(function(){
+alert("Hi "+localStorage.getItem("xyz"));
+});
+$(".access").click(function(){
+alert("last name is  "+localStorage.getItem("pqr"));
+});
+});
+}
+</script>
+<body>
+<form>
+<label>First Name:<input type=text id="fn"></label><br><br>
+<label>Last Name:<input type=text id="fn1"></label><br><br>
+<button type="button" class="save">Save Data</button>
+<button type="button" class="access">Get Data</button>
+</form>
+</body>
+</html>
