@@ -51,5 +51,33 @@ XML Schema
 XML schema is a language which is used to express contraint about XML document.
 XML document is called as well-formed when it contain   validation against schema.
 
-
-
+--------------------------------------------------------------------
+<?xml version="1.0"?>  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  
+targetNamespace="http://www.mphasis.com"  
+xmlns="http://www.mphasis.com"  
+elementFormDefault="qualified">  
+  
+<xs:element name="employee">  
+  <xs:complexType>  
+    <xs:sequence>  
+      <xs:element name="firstname" type="xs:string"/>  
+      <xs:element name="lastname" type="xs:string"/>  
+      <xs:element name="email" type="xs:string"/>  
+    </xs:sequence>  
+  </xs:complexType>  
+</xs:element>  
+  
+</xs:schema>  
+----------------------------------------------------
+<?xml version="1.0"?>  
+<employee  
+xmlns="http://www.mphasis.com"  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+xsi:schemaLocation="http://www.mphasis.com employee.xsd">  
+  
+  <firstname>sandip</firstname>  
+  <lastname>Mohapatra</lastname>  
+  <email>sandip@gmail.com</email>  
+</employee>  
+------------------------------------------------------------------------
