@@ -20,3 +20,25 @@ It is an standard which is used to define the legal elements in an XML document.
 XSD(XML schema defination)
 It is an XML based DTD used to describe the structure of the XML document.
 -------------------------------------------------------------------
+Valid and well-formed XML document with DTD
+Let's take an example of well-formed and valid XML document. It follows all the rules of DTD.
+
+employee.xml
+
+<?xml version="1.0"?>  
+<!DOCTYPE employee SYSTEM "employee.dtd">  
+<employee>  
+  <firstname>sandip</firstname>  
+  <lastname>Mohapatra</lastname>  
+  <email>sandip@gmail.com</email>  
+</employee>   
+In the above example, the DOCTYPE declaration refers to an external DTD file. The content of the file is shown in below paragraph.
+------------------------------------------------------------------------------------------------------------------------------------------
+employee.dtd
+
+<!ELEMENT employee (firstname,lastname,email)>  
+<!ELEMENT firstname (#PCDATA)>  
+<!ELEMENT lastname (#PCDATA)>  
+<!ELEMENT email (#PCDATA)>  
+
+------------------------------------------------------------------------------------------------
