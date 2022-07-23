@@ -24,7 +24,7 @@ Valid and well-formed XML document with DTD
 Let's take an example of well-formed and valid XML document. It follows all the rules of DTD.
 
 employee.xml
-
+---------------------------------------------------
 <?xml version="1.0"?>  
 <!DOCTYPE employee SYSTEM "employee.dtd">  
 <employee>  
@@ -42,3 +42,9 @@ employee.dtd
 <!ELEMENT email (#PCDATA)>  
 
 ------------------------------------------------------------------------------------------------
+<!DOCTYPE employee :- It definesd that the root element of the document is employee.
+<!ELEMENT employee :- It defines emeployee contains 3 elements firstname,lastname,email
+<!ELEMENT firstname (#PCDATA)>  :- It defines that the firstname element is #PCDATA (parseable data type)
+---------------------------------------------------------------------------------------------------------
+
+
