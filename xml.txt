@@ -35,7 +35,7 @@ employee.xml
 In the above example, the DOCTYPE declaration refers to an external DTD file. The content of the file is shown in below paragraph.
 ------------------------------------------------------------------------------------------------------------------------------------------
 employee.dtd
-
+------------------------
 <!ELEMENT employee (firstname,lastname,email)>  
 <!ELEMENT firstname (#PCDATA)>  
 <!ELEMENT lastname (#PCDATA)>  
@@ -46,5 +46,10 @@ employee.dtd
 <!ELEMENT employee :- It defines emeployee contains 3 elements firstname,lastname,email
 <!ELEMENT firstname (#PCDATA)>  :- It defines that the firstname element is #PCDATA (parseable data type)
 ---------------------------------------------------------------------------------------------------------
+XML Schema
+---------------------------
+XML schema is a language which is used to express contraint about XML document.
+XML document is called as well-formed when it contain   validation against schema.
+
 
 
