@@ -50,8 +50,9 @@ XML Schema
 ---------------------------
 XML schema is a language which is used to express contraint about XML document.
 XML document is called as well-formed when it contain   validation against schema.
-
---------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+employee.xsd
+--------------------------
 <?xml version="1.0"?>  
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  
 targetNamespace="http://www.mphasis.com"  
@@ -70,6 +71,8 @@ elementFormDefault="qualified">
   
 </xs:schema>  
 ----------------------------------------------------
+employee.xml
+--------------------------------
 <?xml version="1.0"?>  
 <employee  
 xmlns="http://www.mphasis.com"  
@@ -81,3 +84,15 @@ xsi:schemaLocation="http://www.mphasis.com employee.xsd">
   <email>sandip@gmail.com</email>  
 </employee>  
 ------------------------------------------------------------------------
+
+1)<xs:element name="employee">  :- This defines the root element name as employee.
+2)<xs:complexType> :-It will define that the element employee  is complex type having sub-braches.
+3)<xs:sequence>  :-It defines that the complex type is having a sequence of elements.
+4)<xs:element name="firstname" type="xs:string"/>  :- it defines that the element firstname is of string type .
+
+There  are two types of datatypes in XML schema.
+1)simple type:- It contains less attributes and child elements. 
+2)complex type:- It contains multiple attributes and many sub elements.
+-----------------------------------------------------------------------------------------------------------
+
+ 
