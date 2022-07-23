@@ -1,0 +1,22 @@
+XML (extensible markup Language)
+--------------------------------------------------
+1)It is used to store and transport data.
+2)XML is designed to self-descriptive.
+3)TThe tags are not predefined .we have to define our own tags.
+4)It is platform and language independent.
+-------------------------
+example-1
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<note>
+<to>Ranjit</to>
+<from>Sandip</from>
+<heading>Welcome to XML</heading>
+<body>Don't forget call me this weekend</body>
+</note>
+--------------------------------------------------------------------------
+DTD (Document type definition)
+It is an standard which is used to define the legal elements in an XML document.
+--------------------------------------------------------------
+XSD(XML schema defination)
+It is an XML based DTD used to describe the structure of the XML document.
+-------------------------------------------------------------------
