@@ -23,5 +23,4 @@
 23)IN DTD we use-------keyword,when we want an attribute to have a fixed value without allowing the author to change it?
 24)true or false s1:xml was designed to display data with focus on how data looks    s2:xml allows creation of user defined tags to give structure tags to give structure and meaning to data
 25)which of the following is not valid from dom methods?
-firdt child
-I think both are true
+options-first child,first sibling,last child,previous sibling
