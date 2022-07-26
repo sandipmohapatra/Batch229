@@ -24,3 +24,6 @@
 24)true or false s1:xml was designed to display data with focus on how data looks    s2:xml allows creation of user defined tags to give structure tags to give structure and meaning to data
 25)which of the following is not valid from dom methods?
 options-first child,first sibling,last child,previous sibling
+26)which of the following element is used for activation of click event of javascript.
+ans :submit or button
+27)
