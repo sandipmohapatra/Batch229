@@ -1,0 +1,27 @@
+1)In xml /html entities start with ____ and end with ___
+2)valid XML instruction                                                  <?xml version="1." encoding="UTF-8"?>                                              <?xml version="1." encoding="UTF-8"?>
+3)in xml,environment specific terminologies are captured as language tags
+4)Which of the following part of URL specifies a part of position with in overall resource and browser may scroll to  display that part of page directly.
+5)which fo the following is not valid from given dom methods ? 1-firstchild 2-firstsibling 3- lastchild 4-previous sibling
+6)the class used to create a doc object in js code to process the xml doc
+7)which of the following tag is used to embed css in html page
+8)the classes used to create  a document object in a javascript code to process XML documet?
+9)which is the synonym of jQuery() function?
+10)file which splits into packets will be assigned a destination address 1- IP 2-TCP 3-FTP 4-TELNET 5-SMTP
+11)The datatype of a Javascript variable ..............
+12)document.write() function displays the  new content without overwriting earlier presented material? yes or no
+13)which of the following is wellformedness criteria for xml documents
+14)Which is the ML aspect in HTML?
+15)which of  the following is/are the wellformedness criteria for XML document
+16)The datatype of Javascript is nothing it assigns based on the data type u given.
+17)Which is used to take an action to send form data to a serve?
+18)the class used to dreate a document object in a javascript
+19)which of the following java script event will occur when web page gets loaded? 1)onUnload 2)onload 3)when load 4)after load 5)before load
+20)TCP
+21)Which method will return a single element with specified value?
+22)synonyum of jquerry is $()
+23)IN DTD we use-------keyword,when we want an attribute to have a fixed value without allowing the author to change it?
+24)true or false s1:xml was designed to display data with focus on how data looks    s2:xml allows creation of user defined tags to give structure tags to give structure and meaning to data
+25)which of the following is not valid from dom methods?
+firdt child
+I think both are true
