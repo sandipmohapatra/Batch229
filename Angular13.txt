@@ -726,7 +726,7 @@ export class AmazonComponent {
                           <td>{{item.Price}}</td>
                           <td><img width="50" height="50" [src]="item.Photo"></td>
                           <td>
-                              <button (click)="DeleteCartItem(i)" class="btn btn-outline-danger"> <span class="fa fa-trash"></span> </button>
+                              <button (click)="DeleteCartItem(i)" class="btn btn-outline-danger"> <span class="fa fa-trash"></span> Delete</button>
                           </td>
                       </tr>
                   </tbody>
