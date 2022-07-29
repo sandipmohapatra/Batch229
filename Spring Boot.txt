@@ -3023,7 +3023,11 @@ System.out.println("row inserted");
 }
 }
 -------------------------------------------------
-
+step 1:-show databases;
+step 2:-create database mphasis229;
+step 3:- use mphasis229;
+step 3:-create table student(rollno int,name varchar(30),address varchar(30));
+step 4:-insert into student values(101,'sandip','bangalore');
 
 
 
