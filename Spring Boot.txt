@@ -3056,7 +3056,28 @@ System.out.println("row deleted");
 }
 }
 --------------------------------------------------------------------------------------------------------------------
-
+import java.sql.*;
+import java.util.*;
+public class FirstPrg
+{
+public static void main(String[] args)throws Exception 
+{
+Class.forName("com.mysql.jdbc.Driver");
+Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/mphasis229","root","1234");
+Scanner ob=new Scanner(System.in);
+System.out.println("enter rollno,name,address");
+int rollno=ob.nextInt();
+String name=ob.next();
+String address=ob.next();
+PreparedStatement st=con.prepareStatement("insert into student values(?,?,?)");
+st.setInt(1,rollno);
+st.setString(2,name);
+st.setString(3,address);
+st.execute();
+System.out.println("row inserted");
+}
+}
+-------------------------------------------------------------------------------------------------------
 
 
 
