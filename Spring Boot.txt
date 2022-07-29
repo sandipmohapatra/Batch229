@@ -3043,6 +3043,19 @@ System.out.println("row updated");
 }
 }
 -----------------------------------------------------------------------------------------------------------
+import java.sql.*;
+public class FirstPrg
+{
+public static void main(String[] args)throws Exception 
+{
+Class.forName("com.mysql.jdbc.Driver");
+Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/mphasis229","root","1234");
+Statement st=con.createStatement();
+st.execute("delete from student where rollno=103");
+System.out.println("row deleted");
+}
+}
+--------------------------------------------------------------------------------------------------------------------
 
 
 
