@@ -3142,7 +3142,37 @@ while(rs.next())
 get the column(1),column(2) and column (3)
 }
 ------------------------------------------------------------------------
+create table
+---------------------
+import java.sql.*;
+import java.util.*;
+public class FirstPrg
+{
+public static void main(String[] args)throws Exception 
+{
+Class.forName("com.mysql.jdbc.Driver");
+Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/mphasis229","root","1234");
+/*PreparedStatement st=con.prepareStatement("create table studentbatch229(empno int,name varchar(30),"
+		+ "address varchar(30),phoneno varchar(30)) ");
+st.execute();
+System.out.println("table created");*/
+Scanner ob=new Scanner(System.in);
+System.out.println("enter empno,name,address,phoneno");
+int empno=ob.nextInt();
+String name=ob.next();
+String address=ob.next();
+String phoneno=ob.next();
+PreparedStatement st=con.prepareStatement("insert into studentbatch229 values(?,?,?,?)");
+st.setInt(1,empno);
+st.setString(2,name);
+st.setString(3,address);
+st.setString(4,phoneno);
+st.execute();
+System.out.println("row inserted");
 
+}
+}
+-----------------------------------------------------------------------------------
 
 
 
