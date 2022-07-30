@@ -1,3 +1,4 @@
+Spring Boot
 ---------------------------------------------------------
 Spring Boot is a project that is built on the top of the Spring Framework. It provides an easier and faster way to set up, configure, and run both simple and web-based applications.
 
@@ -3116,6 +3117,31 @@ System.out.println("row delete");
 }
 }
 -------------------------------------------------------------------------------------------------------------
+selecting the rows of the table
+--------------------------------------------
+import java.sql.*;
+public class FirstPrg
+{
+public static void main(String[] args)throws Exception 
+{
+Class.forName("com.mysql.jdbc.Driver");
+Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/mphasis229","root","1234");
+PreparedStatement st=con.prepareStatement("select * from student");
+ResultSet rs=st.executeQuery();
+while(rs.next())
+{
+	System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3));
+}
+}
+}
+----------------------------------------------------------
+ResultSet rs---It is use to store the whole table in rs.
+The pointer will go to the next record .so we are using 
+while(rs.next())
+{
+get the column(1),column(2) and column (3)
+}
+------------------------------------------------------------------------
 
 
 
