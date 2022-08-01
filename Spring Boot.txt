@@ -3317,6 +3317,8 @@ ps.execute();
 out.println("row inserted");
 %>
 ---------------------------------------------------------------------------------------
+create table employee(name varchar(30),address varchar(30),phoneno varchar(30),email varchar(30));
+---------------------------------------------------------------------
 
 
 
