@@ -3290,7 +3290,33 @@ out.println("The phone no is "+c);
 out.println("<br>");
 out.println("The email is "+d);%>
 ------------------------------------------------------------
-
+example-2
+---------------------
+<%@page import="java.sql.*" %>
+<% String a=request.getParameter("t1");
+String b=request.getParameter("t2");
+String c=request.getParameter("t3");
+String d=request.getParameter("t4");%>
+<h1>This is data</h1>
+<%out.println("The name is "+a);
+out.println("<br>");
+out.println("The address is "+b);
+out.println("<br>");
+out.println("The phone no is "+c);
+out.println("<br>");
+out.println("The email is "+d);%>
+<%
+Class.forName("com.mysql.jdbc.Driver");
+Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/mphasis229","root","1234");
+PreparedStatement ps=con.prepareStatement("insert into employee values(?,?,?,?)");
+ps.setString(1,a);
+ps.setString(2,b);
+ps.setString(3,c);
+ps.setString(4,d);
+ps.execute();
+out.println("row inserted");
+%>
+---------------------------------------------------------------------------------------
 
 
 
