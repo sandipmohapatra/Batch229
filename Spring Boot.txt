@@ -3404,6 +3404,8 @@ out.println("</table>");
 }
 %>
 -------------------------------------------------------------------------------
+JSP :- (java server pages)
+----------------------------------------------
 <%@page import="java.sql.*" %>
 <% String a=request.getParameter("t1");
 String b=request.getParameter("t2");
@@ -3466,7 +3468,114 @@ catch(Exception ae)
 }
 %>
 -------------------------------------------------------------------------------
+servlet:-
+----------------
+jsp is converted to servlet.
+--------------------------------------
+There are 2 types servlet 1)generic servlet 2)httpServlet
+1)generic servlet are protocal independent where as httpServlet are protocal dependent.
+our internet work will http protoocals.
+-----------------------------------------------------------------
+example-2
+----------------
+<html>
+<body bgcolor=cyan>
+<h1><center>Employee Registration Page</center></h1><hr>
+<form action="second">
+<table>
+<tr><td>Enter your name<td><input type=text name=t1 size=20></tr>
+<tr><td>Enter your address<td><input type=text name=t2 size=20></tr>
+<tr><td>Enter your phoneno<td><input type=text name=t3 size=20></tr>
+<tr><td>Enter your email<td><input type=text name=t4 size=20></tr>
+<tr><td><td><input type=submit name=b1 value=insert>
+<input type=submit name=b1 value=update>
+<input type=submit name=b1 value=delete>
+<input type=submit name=b1 value=select>
+</tr>
+</table>
+</form>
+</body>
+</html>
+-----------------------------------------------------------------------------
+import java.io.*;
+import java.sql.*;
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
+@WebServlet("/second")
+public class second extends HttpServlet 
+{
+		public void init()
+	{
+	System.out.println("init");	
+	}
+	public void service(HttpServletRequest req,HttpServletResponse res)throws ServletException,IOException
+	{
+		PrintWriter out=res.getWriter();
+		res.setContentType("text/html");
+		String a=req.getParameter("t1");
+		String b=req.getParameter("t2");
+		String c=req.getParameter("t3");
+		String d=req.getParameter("t4");
+		String but=req.getParameter("b1");
+				try
+		{
+		Class.forName("com.mysql.jdbc.Driver");
+		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/mphasis229","root","1234");
 
+		if(but.equals("insert"))
+		{
+		PreparedStatement ps=con.prepareStatement("insert into employee values(?,?,?,?)");
+		ps.setString(1,a);
+		ps.setString(2,b);
+		ps.setString(3,c);
+		ps.setString(4,d);
+		ps.execute();
+		out.println("row inserted");
+		}
+		else if(but.equals("update"))
+		{
+		PreparedStatement ps=con.prepareStatement("update employee address=?,phoneno=?,email=? where name=?");
+		ps.setString(1,b);
+		ps.setString(2,c);
+		ps.setString(3,d);
+		ps.setString(4,a);
+		ps.execute();
+		out.println("row update");
+		}
+		else if(but.equals("delete"))
+		{
+		PreparedStatement ps=con.prepareStatement("delete from employee where name=?");
+		ps.setString(1,a);
+		ps.execute();
+		out.println("row deleted");
+		}
+		else 
+		{
+		PreparedStatement ps=con.prepareStatement("select * from employee");
+		ResultSet rs=ps.executeQuery();
+		out.println("<h1><center>Employee Data</center></h1><hr color=red>");
+		out.println("<table border=1 width='50%'>");
+		out.println("<tr>");
+		out.println("<th>"+"Name "+" <th>  "+"Address  "+"<th>"+" Phoneno"+"<th>"+"Email"+"</tr>");
+		while(rs.next())
+		{
+			out.println("<td>"+rs.getString(1)+" <td>  "+rs.getString(2)+"<td>  "+rs.getString(3)+"<td> "+rs.getString(4));
+			out.println("</tr>");
+		}
+		out.println("</table>");
+		}
+		}
+		catch(Exception ae)
+		{
+			ae.printStackTrace();
+		}
 
-
+	}
+	public void destroy()
+	{
+		System.out.println("destroy");
+	}
+}	
+--------------------------------------------------------------------------------------------------
 	
