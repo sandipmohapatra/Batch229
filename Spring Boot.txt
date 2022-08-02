@@ -3318,9 +3318,92 @@ out.println("row inserted");
 %>
 ---------------------------------------------------------------------------------------
 create table employee(name varchar(30),address varchar(30),phoneno varchar(30),email varchar(30));
----------------------------------------------------------------------
-
-
+----------------------------------------Assignment-----------------------------
+wap to create a customer registration page
+-----------------------------------------------------------------
+custno
+name
+address
+email
+phoneno
+productname---tv
+price--45000
+--------------------------------------------------
+example-1
+---------------------
+<html>
+<body bgcolor=cyan>
+<h1><center>Employee Registration Page</center></h1><hr>
+<form action="second.jsp">
+<table>
+<tr><td>Enter your name<td><input type=text name=t1 size=20></tr>
+<tr><td>Enter your address<td><input type=text name=t2 size=20></tr>
+<tr><td>Enter your phoneno<td><input type=text name=t3 size=20></tr>
+<tr><td>Enter your email<td><input type=text name=t4 size=20></tr>
+<tr><td><td><input type=submit name=b1 value=insert>
+<input type=submit name=b1 value=update>
+<input type=submit name=b1 value=delete>
+<input type=submit name=b1 value=select>
+</tr>
+</table>
+</form>
+</body>
+</html>
+--------------------------------------------
+<%@page import="java.sql.*" %>
+<% String a=request.getParameter("t1");
+String b=request.getParameter("t2");
+String c=request.getParameter("t3");
+String d=request.getParameter("t4");
+String but=request.getParameter("b1");
+%>
+<%
+Class.forName("com.mysql.jdbc.Driver");
+Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/mphasis229","root","1234");
+if(but.equals("insert"))
+{
+PreparedStatement ps=con.prepareStatement("insert into employee values(?,?,?,?)");
+ps.setString(1,a);
+ps.setString(2,b);
+ps.setString(3,c);
+ps.setString(4,d);
+ps.execute();
+out.println("row inserted");
+}
+else if(but.equals("update"))
+{
+PreparedStatement ps=con.prepareStatement("update employee address=?,phoneno=?,email=? where name=?");
+ps.setString(1,b);
+ps.setString(2,c);
+ps.setString(3,d);
+ps.setString(4,a);
+ps.execute();
+out.println("row update");
+}
+else if(but.equals("delete"))
+{
+PreparedStatement ps=con.prepareStatement("delete from employee where name=?");
+ps.setString(1,a);
+ps.execute();
+out.println("row deleted");
+}
+else 
+{
+PreparedStatement ps=con.prepareStatement("select * from employee");
+ResultSet rs=ps.executeQuery();
+out.println("<h1><center>Employee Data</center></h1><hr color=red>");
+out.println("<table border=1 width='50%'>");
+out.println("<tr>");
+out.println("<th>"+"Name "+" <th>  "+"Address  "+"<th>"+" Phoneno"+"<th>"+"Email"+"</tr>");
+while(rs.next())
+{
+	out.println("<td>"+rs.getString(1)+" <td>  "+rs.getString(2)+"<td>  "+rs.getString(3)+"<td> "+rs.getString(4));
+	out.println("</tr>");
+}
+out.println("</table>");
+}
+%>
+-------------------------------------------------------------------------------
 
 
 
