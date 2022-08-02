@@ -3476,6 +3476,12 @@ There are 2 types servlet 1)generic servlet 2)httpServlet
 1)generic servlet are protocal independent where as httpServlet are protocal dependent.
 our internet work will http protoocals.
 -----------------------------------------------------------------
+In servlet we don't have main method
+we have the life cycle method
+1)public void init():- memory block created
+2)public void service(HttpServlet request,HttpServlet response) :- take the request from client page and give the response
+3)public void destroy()  ----memory blocks will be destroyed
+-----------------------------------------------------------------------------
 example-2
 ----------------
 <html>
@@ -3521,7 +3527,7 @@ public class second extends HttpServlet
 				try
 		{
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/mphasis229","root","1234");
+	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/mphasis229","root","1234");
 
 		if(but.equals("insert"))
 		{
@@ -3535,7 +3541,7 @@ public class second extends HttpServlet
 		}
 		else if(but.equals("update"))
 		{
-		PreparedStatement ps=con.prepareStatement("update employee address=?,phoneno=?,email=? where name=?");
+PreparedStatement ps=con.prepareStatement("update employee address=?,phoneno=?,email=? where name=?");
 		ps.setString(1,b);
 		ps.setString(2,c);
 		ps.setString(3,d);
@@ -3560,7 +3566,7 @@ public class second extends HttpServlet
 		out.println("<th>"+"Name "+" <th>  "+"Address  "+"<th>"+" Phoneno"+"<th>"+"Email"+"</tr>");
 		while(rs.next())
 		{
-			out.println("<td>"+rs.getString(1)+" <td>  "+rs.getString(2)+"<td>  "+rs.getString(3)+"<td> "+rs.getString(4));
+	out.println("<td>"+rs.getString(1)+" <td>  "+rs.getString(2)+"<td>  "+rs.getString(3)+"<td> "+rs.getString(4));
 			out.println("</tr>");
 		}
 		out.println("</table>");
