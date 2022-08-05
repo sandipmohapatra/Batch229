@@ -42,4 +42,55 @@ client requirement is
 ----------------------------------------------
 all the methods will be written into a interface and the devlopers will override and complete all the requirements.
 -----------------------------------------------------------------------------------------------
+wap to create a interface for student 
+input data of student 
+display data of student
+-----------------------------------------------------
+example-1
+------------------
+import java.util.*;
+interface student
+{
+	void input();
+	void display();
+}
+public class Second implements student 
+{
+int rollno;
+String name,address; 
+	@Override
+	public void input()
+	{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter rollno,name,address");
+		 rollno=ob.nextInt();
+		 name=ob.next();
+		address=ob.next();
+	}
+
+	@Override
+	public void display() {
+		System.out.println("The rollno is "+rollno);
+		System.out.println("The name is "+name);
+		System.out.println("The address is "+address);
+		
+	}
+public static void main(String[] args) {
+	Second obj=new Second();
+	obj.input();
+	obj.display();
+}
+}
+----------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
 
