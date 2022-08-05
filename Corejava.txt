@@ -1,0 +1,45 @@
+interface bank
+{
+	void input();
+	void display();
+}
+
+public class First implements bank
+{
+
+	@Override
+	public void input() {
+	System.out.println("This is input data");
+	}
+
+	@Override
+	public void display() {
+		System.out.println("This is display data");
+		
+	}
+	public static void main(String[] args) {
+		First ob=new First();
+		ob.display();
+		ob.input();
+	}
+}
+
+
+interface:- It contains only abstract methods.That is method without body.
+we cannot create object of an interface.
+we have to implement it into a child class.we have to override all the abstract methods and create object of a child class.
+
+override means the same function repeated in the child class with body.
+---------------------
+why we use interface ?
+the important points are mentioned in the interface.
+we are going to create a bank project.
+client requirement is 
+1)registration of customer to open account
+2)withdraw money /deposite money
+3)apply for credit/debit card
+4)apply for various loans
+----------------------------------------------
+all the methods will be written into a interface and the devlopers will override and complete all the requirements.
+-----------------------------------------------------------------------------------------------
+
