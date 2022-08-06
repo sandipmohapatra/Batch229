@@ -783,11 +783,75 @@ sentencecase.component.html
 ---------------------------------------------
 <p>The sentence is {{msg | sentencecase}}</p>
 ---------------------------------------------------------------------------
+Angular Service:-
+-------------------------
+It is used for creating user-defined business logic which can be reused in the application by injecting into any component.
+-------------------------------------------------
+Difference between service and function
+--------------------------------------------------------
+function is used for a single application or within the folder or project.
 
+service is used for any component for any project or folder not for single appliaction.
+--------------------------------------------------------------------------------------------------------------------------
+step 1:- we will create a service in a separte folder.
+step 2:- we will inject it to a component and use it.
 
+1)import {Injectable} from '@angular/core'
+2)@Injectable()
+3)providedIn:'root'
+-----------------------------------------------------------------------------------------------
+calc.service.ts(create this inside the app folder)
+---------------------------------------------------------------------------
+import {Injectable} from '@angular/core'
+@Injectable({
+providedIn:'root'
+})
 
+export class calculatorService
+{
+    public add(...params:number[]):number
+    {
+        let result=0;
+        for(let val of params)
+        {
+            result+=val;
+        }
+        return result;
+    }
+  
+}
+-----------------------------------------------------
+ng g c calcService
+--------------------------------------
+import { Component, OnInit } from '@angular/core';
+import { calculatorService } from '../calc.service';
 
-
+@Component({
+  selector: 'app-calc-service',
+  templateUrl: './calc-service.component.html',
+  styleUrls: ['./calc-service.component.css']
+})
+export class CalcServiceComponent {
+sum:number=0;
+constructor(calc:calculatorService)
+{
+  this.sum=calc.add(55,6,7,88);
+  console.log("The summ is "+this.sum);
+  alert("The summ is "+this.sum);
+}
+ 
+}
+------------------------------------------------------------
+module.ts
+----------------------------
+import { CalcServiceComponent } from './calc-service/calc-service.component';
+import { calculatorService } from './calc.service';
+--------------------------------------------------------------------------
+providers: [calculatorService],
+  bootstrap: [CalcServiceComponent]
+-------------------------------------------------------------------------------------------------------------
+index.html
+----------------------------
 
 
 
