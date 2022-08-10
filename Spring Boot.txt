@@ -2031,7 +2031,7 @@ PUT/users/{id} :- It will UPDATE the details of the users whose id is mentioned.
 ---------------------------------------------
 webservices :-mobile app bookmy show,amazon,flipcard,telephone bill payment.
 paytm :- all services are put together to make customers satisfied.
-amazon:- online shopping,utility bils payment.
+amazon:- online shopping,utility bills payment.
 In this data tranformation will be done by using JSON,text,Html,xml 
 It can be reused.we can develop webservices using .net,java,php etc.
 We can comunicate with the services.
@@ -2106,6 +2106,7 @@ public class Book
 private long bookid;
 private String title;
 private double price;
+
 public long getBookid() {
 	return bookid;
 }
@@ -3584,4 +3585,75 @@ PreparedStatement ps=con.prepareStatement("update employee address=?,phoneno=?,e
 	}
 }	
 --------------------------------------------------------------------------------------------------
+assignment-1
+----------------------
+Insurance project make it dynamic
+user jsp/servlet
+database----mysql
+---------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+swagger
+------------------
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+-------------------------------------------------------------------------------------------------------------------------------
+package sandip.swagger.config;
+
+import java.util.Collections;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
+
+import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.Contact;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.plugins.Docket;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
+@Profile({"default","qa"})
+@Configuration
+@EnableSwagger2
+public class SwaggerConfig {
+
+@Bean
+public Docket createDocket()
+{
+	return new Docket(DocumentationType.SWAGGER_2)
+			.select().apis(RequestHandlerSelectors.basePackage("in.nareshit.raghu")).paths(PathSelectors.ant("/rest/**"))
+			.build().apiInfo(apiInfo());
+}
+
+private ApiInfo apiInfo() 
+{
+	return new ApiInfo(
+			"STUDENT REGISTRATION PAGE",
+			"http://simoninfotech.com",
+			"For Mphasis Student",
+			"Batch 215",
+			new Contact("sandip Mohapatra","7760213015","SpringWebServices"),"company","Mphasis",Collections.emptyList());
+}
+	
+}
+------------------------------------------------Why Swagger----------------------------------------
+we are passing the value using angular.the data is modified ,deleted,saved for retrived from the database using angular.
+frontend dev are under process.The backend developer have completed there task now to test there application without the angular we use swagger/postman.It is a graphical user interface.
+it support get,put,delete,post.Our browser support only get.
+-------------------------------------------------------------------------------------------
+all the files are connected in the controller.It has a input and it has a return output.
+-------------------------------
+http://localhost:8090/swagger-ui.html
+---------------------------------------------------------------------------------------
+
+
 	
